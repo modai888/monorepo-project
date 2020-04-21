@@ -1,0 +1,32 @@
+{
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "build": "lerna run --stream --sort build",
+        "commit": "git-cz"
+    },
+    "workspaces": [
+        "packages/*",
+        "cas_server"
+    ],
+    "config": {
+        "commitizen": {
+            "path": "cz-lerna-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^8.3.5",
+        "@commitlint/config-conventional": "^8.3.4",
+        "commitizen": "^4.0.4",
+        "cz-conventional-changelog": "^3.1.0",
+        "cz-lerna-changelog": "^2.0.2",
+        "husky": "^4.2.5",
+        "lerna": "^3.20.2",
+        "typescript": "^3.8.3"
+    }
+}

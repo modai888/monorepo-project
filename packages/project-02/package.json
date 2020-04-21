@@ -1,0 +1,24 @@
+{
+  "name": "project-02",
+  "version": "0.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "王学波 <wangxuebo@datafountain.cn>",
+  "license": "ISC",
+  "main": "lib/project-02.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build":"echo 'build project-02'"
+  },
+  "dependencies": {
+    "project-01": "^1.0.0"
+  }
+  
+}
