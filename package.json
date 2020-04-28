@@ -7,6 +7,7 @@
         "yarn": ">=1.15"
     },
     "scripts": {
+        "start:debug":"concurrently -k -p '[{name}]' -n 'demo_web,demo_server' -c \"green.bold,cyan.bold\" \"cd demo_web && yarn start:debug\" \"cd demo_server && yarn start:debug\"",
         "build": "lerna run --stream --sort build",
         "commit": "git-cz"
     },
