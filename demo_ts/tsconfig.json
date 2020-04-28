@@ -1,0 +1,24 @@
+{
+    "extends": "../tsconfig",
+    "compilerOptions": {
+        "target": "ESNext",
+        "outDir": "./lib",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "lib":[
+            
+        ],
+        // "baseUrl": ".",
+        // "paths": {
+        //     "@cas/core":[
+        //         "../packages/cas_core/src"
+        //     ]
+        // }
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "src/**/*.spec.ts",
+    ]
+}
