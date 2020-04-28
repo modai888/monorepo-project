@@ -6,6 +6,8 @@ https://juejin.im/post/5d583231e51d45620541039e
 
 https://classic.yarnpkg.com/blog/2017/08/02/introducing-workspaces/
 
+[微软Starter工程](https://github.com/microsoft?q=starter&type=&language=)
+
 
 1、在合适的位置创建工程目录`mono-project`
 
@@ -184,4 +186,33 @@ yarn add -D -W commitizen cz-conventional-changelog cz-lerna-changelog
     }
 }
 
+```
+
+9、添加TS支持
+
+安装typescript 
+
+```bash
+yarn -D -W add typescript
+
+## 初始化为ts工程
+npx tsc --init
+```
+
+10、添加Jest测试（支持TS）
+
+```bash
+# 安装依赖包
+yarn -W -D add jest ts-jest @types/jest
+```
+
+添加jest配置文件jest.config.js
+
+> 每个子工程也需要该配置文件，另外还需要在每个子工程的tsconfig.json中的exclude中排除对*.spec.ts/tsx文件的编译
+
+```js
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+};
 ```
