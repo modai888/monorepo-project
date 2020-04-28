@@ -1,0 +1,26 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": {
+        "target": "es5",
+        "outDir": "lib",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowJs": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "node_modules/*",
+                "types/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+       "src/**/*.spec.ts",
+       "src/**/*.spec.tsx"
+    ]
+}

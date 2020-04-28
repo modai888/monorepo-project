@@ -1,0 +1,40 @@
+{
+  "name": "@cas/model",
+  "version": "2.0.0",
+  "description": "Models for cas",
+  "author": "王学波_DF <wangxuebo@datafountain.cn>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://xgitlab.lunjian.team/SSO/cas.git"
+  },
+  "scripts": {
+    "build": "rimraf ./lib/* && tsc",
+    "clean": "rimraf ./lib/*",
+    "test": "jest",
+    "migrate": "tsc && sequelize-cli db:migrate",
+    "migrate:undo": "tsc && sequelize-cli db:migrate:undo",
+    "seed:all": "tsc && sequelize-cli db:seed:all"
+  },
+  "dependencies": {
+    "mysql2": "^2.1.0",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^5.21.7"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.30",
+    "@types/validator": "^13.0.0",
+    "sequelize-cli": "^5.5.1"
+  }
+}
