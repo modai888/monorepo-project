@@ -3,6 +3,10 @@ const path = require('path');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 const baseUrl = '/';
+const host = 'portal-local.lunjian.team';
+const webDevPort = 8082;
+const serverDevPort = 2555;
+
 const productionGzipExtensions = ['js', 'css'];
 
 module.exports = {
@@ -58,14 +62,16 @@ module.exports = {
             .use('file-loader')
             .loader('file-loader')
             .tap(args => {
-                console.warn('url-loader', args)
-                return args
-            })
+                console.warn('url-loader', args);
+                return args;
+            });
     },
 
     devServer: {
-        port: 8082,
-        host: 'portal-local.lunjian.team',
+        port: webDevPort,
+        host,
+        open: true,
+        openPage: '',
 
         // 该选项需要查看vue-cli是如何配置的
         historyApiFallback: {
@@ -85,49 +91,16 @@ module.exports = {
         logLevel: 'debug',
 
         proxy: {
-            '^/notebooks/api': {
-                target: 'http://test-lab.datafountain.cn:2444',
-                changeOrigin: true,
-                headers: {},
-                logLevel: 'debug',
-            },
-            '^/notebooks/labs/service-proxy': {
-                target: 'http://test-lab.datafountain.cn:2444',
-                changeOrigin: true,
-                headers: {},
-                logLevel: 'debug',
-            },
-            '^/notebooks/[^\/]+/service-proxy': {
-                target: 'http://test-lab.datafountain.cn:2444',
-                changeOrigin: true,
-                headers: {},
-                logLevel: 'debug',
-            },
-            '^/hub/api': {
-                target: 'http://test-lab.datafountain.cn:2444',
-                changeOrigin: true,
-                headers: {},
-                logLevel: 'debug',
-            },
-            '^/user/[^/]+/api/kernels/[^/]+/channels': {
-                target: 'https://dlab-demo.datafountain.cn',
-                changeOrigin: true,
-                headers: {
-                    Origin: 'https://dlab-demo.datafountain.cn',
-                },
-                ws: true,
-            },
-            '^/user': {
-                target: 'http://test-lab.datafountain.cn:2444',
+            '^/api': {
+                target: `${host}:${serverDevPort}`,
                 changeOrigin: true,
                 headers: {},
                 logLevel: 'debug',
             },
             '/upload': {
-                target: 'http://test-lab.datafountain.cn:2444',
+                target: `${host}:${serverDevPort}`,
                 changeOrigin: true,
                 headers: {},
-
                 logLevel: 'debug',
             },
         },
