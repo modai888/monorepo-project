@@ -1,0 +1,22 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": {
+        "target": "es6",
+        "outDir": "lib",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "node_modules/*",
+                "types/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+       
+    ]
+}

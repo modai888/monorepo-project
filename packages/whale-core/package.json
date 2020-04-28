@@ -1,0 +1,41 @@
+{
+    "name": "@whale/core",
+    "version": "2.0.0",
+    "description": "Core modules for server based on whale",
+    "keywords": [
+        "cas"
+    ],
+    "author": "王学波_DF <wangxuebo@datafountain.cn>",
+    "homepage": "",
+    "license": "ISC",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "directories": {
+        "lib": "lib"
+    },
+    "files": [
+        "lib"
+    ],
+    "publishConfig": {
+        "registry": "https://registry.npm.taobao.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://xgitlab.lunjian.team/SSO/cas.git"
+    },
+    "scripts": {
+        "build": "rimraf ./lib/* && tsc",
+        "test": "echo \"Error: run tests from root\" && exit 1"
+    },
+    "dependencies": {
+        "@types/klaw-sync": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "klaw-sync": "^6.0.0",
+        "koa": "^2.11.0",
+        "koa-static-cache": "^5.1.2",
+        "reflect-metadata": "^0.1.13"
+    },
+    "devDependencies": {
+        "@types/koa-static-cache": "^5.1.0"
+    }
+}
