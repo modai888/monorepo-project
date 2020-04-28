@@ -1,0 +1,21 @@
+0 silly argv { _: [ 'create' ],
+0 silly argv   lernaVersion: '3.20.2',
+0 silly argv   '$0':
+0 silly argv    'C:\\Program Files (x86)\\Nodist\\bin\\node_modules\\lerna\\cli.js',
+0 silly argv   name: 'ts_demo',
+0 silly argv   loc: 'ts_demo' }
+1 notice cli v3.20.2
+2 verbose rootPath E:\repos\dev_template\mono-spa
+3 error Error: canceled
+3 error     at Interface.<anonymous> (E:\repos\dev_template\mono-spa\node_modules\read\lib\read.js:66:13)
+3 error     at Interface.emit (events.js:182:13)
+3 error     at Interface._ttyWrite (readline.js:783:16)
+3 error     at ReadStream.onkeypress (readline.js:168:10)
+3 error     at ReadStream.emit (events.js:182:13)
+3 error     at emitKeys (internal/readline.js:424:14)
+3 error     at emitKeys.next (<anonymous>)
+3 error     at ReadStream.onData (readline.js:1022:36)
+3 error     at ReadStream.emit (events.js:182:13)
+3 error     at addChunk (_stream_readable.js:283:12)
+3 error     at readableAddChunk (_stream_readable.js:264:11)
+3 error     at ReadStream.Readable.push (_stream_readable.js:219:10)
