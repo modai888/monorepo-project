@@ -12,8 +12,7 @@
     },
     "workspaces": [
         "packages/*",
-        "cas_server",
-        "demo_ts"
+        "demo_server"
     ],
     "config": {
         "commitizen": {
