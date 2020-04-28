@@ -1,0 +1,40 @@
+{
+  "name": "koa-plugin-router",
+  "version": "2.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "王学波_DF <wangxuebo@datafountain.cn>",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://xgitlab.lunjian.team/SSO/cas.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@koa/router": "^8.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/koa": "^2.11.3",
+    "debug": "^4.1.1",
+    "glob": "^7.1.6",
+    "koa": "^2.11.0",
+    "koa-compose": "^4.1.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/koa__router": "^8.0.2"
+  }
+}
