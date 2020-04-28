@@ -73,7 +73,7 @@ export class ConfigManager {
                 );
 
                 let prop = path.basename(items[i].path, path.extname(items[i].path));
-                this._configs[prop] = merge(defaultItems, process.env.NODE_ENV ? config[process.env.NODE_ENV] : {});
+                this._configs[prop] = merge(defaultItems, config[process.env.NODE_ENV || 'development'] || {});
             } catch (error) {
                 error = new Error(`Failed to load config from file "${items[i].path}": ${error}`);
                 throw error;
