@@ -1,4 +1,7 @@
 import Vue from 'vue';
+// plugins
+import '@/plugins/view-design';
+// application
 import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';
