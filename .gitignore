@@ -1,1 +1,9 @@
 node_modules
+dest/
+*/.idea/
+.idea/
+lib
+!cas_uras/server/lib
+
+*-error.log
+*-debug.log
