@@ -5,8 +5,8 @@ import { Application, Bootstrap } from '@whale/core';
 
 @Bootstrap({
     base: __dirname,
-    static: '../cas_uras/dest',
+    static: '../demo_web/dist',
     config: 'configs',
-    modules: 'modules',
+    modules: 'modules'
 })
 class App extends Application {}
