@@ -1,5 +1,5 @@
 {
-  "name": "@cas/model",
+  "name": "sequelize-demo",
   "version": "2.0.0",
   "description": "Models for cas",
   "author": "王学波_DF <wangxuebo@datafountain.cn>",
